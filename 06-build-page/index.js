@@ -80,8 +80,9 @@ fs.mkdir(pathCopyFile, { recursive: true }, (error) => {
 });
 
 fs.readdir(pathFile, { withFileTypes: true }, (error, files) => {
-  if (error) console.log(error);
-  else
+  if (error) {
+    console.log(error);
+  } else
     files.forEach((file) => {
       if (file.isDirectory()) {
         fs.mkdir(
