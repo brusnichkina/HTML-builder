@@ -6,7 +6,7 @@ const pathToFile = path.join(__dirname, 'text.txt');
 const writeStream = fs.createWriteStream(pathToFile, 'utf-8');
 
 const goOutOfHere = () => {
-  stdout.write('Bye!');
+  stdout.write('Bye-bye!');
   process.exit();
 };
 
