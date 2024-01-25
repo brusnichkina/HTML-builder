@@ -11,7 +11,7 @@ fs.readdir(secretFolder, { withFileTypes: true }, (error, files) => {
       if (file.isFile()) {
         const filePath = path.join(secretFolder, file.name);
         const extens = filePath.split('.').pop();
-        const nameOffFile = filePath.split('.').shift();
+        const nameOffFile = filePath.split('.').slice(0, -1).join('.');
         const name = nameOffFile.split('\\').pop();
         fs.stat(filePath, (error, stat) => {
           if (error) {
